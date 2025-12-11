@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ommair Ishaque – Computational Physicist | Water Modeling & Molecular Simulations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Research webpage of Ommair Ishaque – first-principles–driven modeling of liquid water, many-body force fields, and molecular simulations.">
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --card-bg: #ffffff;
+            --text: #1b1f23;
+            --muted: #6a737d;
+            --accent: #005f99;
+            --accent-soft: #e3f3ff;
+            --border: #d1d5da;
+            --max-width: 980px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            font-size: 1.05rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 0.25rem 0.4rem;
+            border-radius: 999px;
+        }
+
+        nav a:hover {
+            background: var(--accent-soft);
+            text-decoration: none;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-left h1 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.9rem;
+        }
+
+        .hero-left h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--muted);
+        }
+
+        .hero-tagline {
+            background: var(--accent-soft);
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0, 95, 153, 0.08);
+        }
+
+        .hero-details {
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+            color: var(--muted);
+        }
+
+        .hero-details span {
+            display: inline-block;
+            margin-right: 0.75rem;
+        }
+
+        .hero-right {
+            align-self: start;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 0.9rem;
+            padding: 1.1rem 1.25rem;
+            border: 1px solid var(--border);
+            margin-bottom: 1.25rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin: 2rem 0 0.75rem 0;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.35rem;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin: 0.35rem 0 0.75rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pill-list li {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            background: #f0f2f6;
+            border: 1px solid #e1e4e8;
+        }
+
+        .pub-list,
+        .item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.3rem 0 0 0;
+        }
+
+        .pub-list li,
+        .item-list li {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+        }
+
+        .pub-meta {
+            font-size: 0.84rem;
+            color: var(--muted);
+        }
+
+        .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 1.25rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.25rem 0 0 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        .btn-row {
+            margin-top: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--accent);
+            background: white;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #00436e;
+            text-decoration: none;
+        }
+
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1rem 1.5rem 2rem 1.5rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .two-col {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav-container">
+        <div class="brand">Ommair Ishaque</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#contact">Contact / CV</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero" id="about">
+        <div class="hero-left">
+            <h1>Ommair Ishaque</h1>
+            <h2>Computational Physicist · Many-Body Water Modeling & Molecular Simulations</h2>
+            <div class="hero-tagline">
+                Ph.D. physicist specializing in first-principles–driven modeling of liquid water and related molecular
+                systems. I design and fit explicit two-body, three-body, and polarization terms to high-level
+                <em>ab initio</em> data and develop high-performance molecular dynamics workflows in Fortran, Python, and C++.
+            </div>
+            <div class="hero-details">
+                <span>Ph.D. in Physics (expected Dec 2025), University of Delaware</span><br>
+                <span>Department of Physics & Astronomy · Newark, DE, USA</span>
+            </div>
+            <div class="btn-row">
+                <!-- Update the href to the actual online CV location -->
+                <a class="btn-primary btn" href="cv/Ommair_Ishaque_CV.pdf" target="_blank">Download CV (PDF)</a>
+                <a class="btn" href="#publications">View publications</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="card">
+                <div class="label">Contact</div>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:ommair@udel.edu">ommair@udel.edu</a></li>
+                    <li>Phone: +1 302 510 9222</li>
+                    <li>Location: Sharp Laboratory, Newark, DE 19716, USA</li>
+                </ul>
+                <hr style="border:none;border-top:1px solid #e1e4e8;margin:0.7rem 0;">
+                <div class="label">Research interests</div>
+                <ul class="pill-list">
+                    <li>Many-body water force fields</li>
+                    <li>Three-body interactions</li>
+                    <li>Polarization & Thole models</li>
+                    <li>NPT molecular dynamics</li>
+                    <li>Supercooled water & anomalies</li>
+                    <li>SAPT / CCSD(T) & DFT</li>
+                    <li>Crystal structure prediction</li>
+                </ul>
+                <p style="font-size:0.85rem; margin:0;">
+                    I combine high-level electronic-structure calculations with large-scale atomistic simulations to
+                    understand how water’s microscopic structure encodes its thermodynamic, structural, and transport
+                    properties from ambient to supercooled regimes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+        <h2 class="section-title">Research Overview</h2>
+        <div class="card">
+            <h3>First-principles water force fields & liquid-state anomalies</h3>
+            <p>
+                My core research develops many-body potential energy surfaces (PES) for water that explicitly include
+                2-body, 3-body, and polarization terms, parameterized to CCSD(T), SAPT, and DFT reference data.
+                These models are implemented in a custom MD engine using quaternion-based rigid-body dynamics,
+                enabling systematic studies of equation-of-state behavior, density anomalies, and structural changes
+                across temperature and pressure.
+            </p>
+            <p>
+                I refit and analyze three-body (3B) contributions—especially exchange and induction—using short-range and
+                long-range components connected by smooth switching functions. This allows quantitative assessment of
+                how far 3B effects extend in liquid water and how cutoff choices impact predicted properties.
+            </p>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <h3>Three-body interactions & long-range damping</h3>
+                <p>
+                    A key part of my work is characterizing the spatial range and functional form of three-body
+                    contributions in liquid water:
+                </p>
+                <ul class="item-list">
+                    <li>Fitting short- and long-range 3B PES components to extensive trimer datasets.</li>
+                    <li>Designing smooth long-range damping that preserves physical behavior while controlling cost.</li>
+                    <li>Quantifying the impact of 3B cutoffs on density, radial distribution functions, and energetics.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Rigid & flexible water models with classical and path-integral MD</h3>
+                <p>
+                    Beyond rigid water, I implement fully flexible, first-principles water potentials in i-Pi to include
+                    nuclear quantum effects via path-integral MD:
+                </p>
+                <ul class="item-list">
+                    <li>Evaluating flexibility and quantum effects on RDFs, diffusion, and related observables.</li>
+                    <li>Comparing rigid vs flexible models for bulk and supercooled liquid water.</li>
+                    <li>Generalizing these techniques toward biomolecular and materials applications.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <h3>Crystal Structure Prediction (CSP)</h3>
+                <p>
+                    I contributed to the CCDC 7th Blind Test of Crystal Structure Prediction (BT7) using
+                    intermonomer force fields derived from SAPT and UPACK-based CSP workflows. This work demonstrates
+                    how high-level quantum chemistry–based force fields can improve structure ranking for flexible
+                    agrochemical molecules.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Plasma and cosmology projects</h3>
+                <p>
+                    Earlier research includes plasma-physics studies of dust-acoustic solitary waves and
+                    electromagnetic ion cyclotron waves in the Earth’s magnetosphere, as well as work on hybrid
+                    inflation with chaotic potentials in precision cosmology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2 class="section-title">Publications</h2>
+
+        <div class="card">
+            <h3>Peer-reviewed articles</h3>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-title">Dust-acoustic solitary waves in plasmas with nonthermal–nonextensive electrons and Boltzmannian ions.</span><br>
+                    <span class="pub-meta">
+                        A. A. Abid, K. Qamer, N. Ahmad, M. S. Hussain, M. N. S. Qureshi, S. Ali,
+                        <b>O. Ishaque</b>, X. Li, G.-R. Yao, Y.-F. Ji. J. Korean Phys. Soc. (2025).
+                        <a href="https://doi.org/10.1007/s40042-025-01499-z" target="_blank">https://doi.org/10.1007/s40042-025-01499-z</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">Magnetospheric multiscale observations of electromagnetic ion cyclotron waves associated with cold ion heating in the Earth’s magnetosphere.</span><br>
+                    <span class="pub-meta">
+                        A. A. Abid, K. Qamar, N. Ahmad, A. Waheed, M. S. Hussain, M. N. S. Qureshi, A. Esmaeili, B. M. Alotaibi,
+                        <b>O. Ishaque</b>, X. Li, G.-R. Yao, Y.-F. Ji. AIP Advances (2025).
+                        <a href="https://doi.org/10.1063/5.0287326" target="_blank">https://doi.org/10.1063/5.0287326</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">The Seventh Blind Test of Crystal Structure Prediction: Structure Generation Methods.</span><br>
+                    <span class="pub-meta">
+                        C. Hunnisett <em>et al.</em> (including <b>O. Ishaque</b>). Acta Cryst. B80 (2024).
+                        <a href="https://doi.org/10.1107/S2052520624007492" target="_blank">https://doi.org/10.1107/S2052520624007492</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">The Seventh Blind Test of Crystal Structure Prediction: Structure Ranking Methods.</span><br>
+                    <span class="pub-meta">
+                        C. Hunnisett <em>et al.</em> (including <b>O. Ishaque</b>). Acta Cryst. B80 (2024).
+                        <a href="https://doi.org/10.1107/S2052520624008679" target="_blank">https://doi.org/10.1107/S2052520624008679</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">Crystal structure predictions for molecules with soft degrees of freedom using intermonomer force fields derived from first principles.</span><br>
+                    <span class="pub-meta">
+                        R. Nikhar, R. Podeszwa, A. Rehman, <b>O. Ishaque</b>, A. Jing, J. Melkumov, K. Szalewicz <em>et al.</em>
+                        Acta Crystallographica Section B (2024).
+                        <a href="https://doi.org/10.1107/S2052520624010837" target="_blank">https://doi.org/10.1107/S2052520624010837</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">Quantum smearing in hybrid inflation with chaotic potentials.</span><br>
+                    <span class="pub-meta">
+                        W. Ahmed, <b>O. Ishaque</b>, M. U. Rehman. Int. J. Mod. Phys. D 25, 1650035 (2016).
+                        <a href="https://doi.org/10.1142/S0218271816500358" target="_blank">https://doi.org/10.1142/S0218271816500358</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Research software & data</h3>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-title">Molecular Dynamics Simulation Code for the Rigid CCpol23+ Water Model Using Quaternion-Based Rigid Body Dynamics.</span><br>
+                    <span class="pub-meta">
+                        <b>O. Ishaque</b>. Zenodo (2025).
+                        <a href="https://doi.org/10.5281/zenodo.14968189" target="_blank">https://doi.org/10.5281/zenodo.14968189</a>
+                    </span>
+                </li>
+            </ul>
+            <p style="font-size:0.85rem; margin-top:0.5rem;">
+                Additional datasets, scripts, and workflows related to many-body water potentials and liquid-state
+                simulations will be released via Zenodo and GitHub alongside forthcoming publications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Manuscripts in preparation</h3>
+            <ul class="pub-list">
+                <li>
+                    <span class="pub-title">How long-range are three-body exchange interactions in liquid water?</span><br>
+                    <span class="pub-meta">
+                        <b>O. Ishaque</b>, K. Szalewicz. In preparation (complete draft).
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">How important is monomer flexibility for predictions of properties of liquid water?</span><br>
+                    <span class="pub-meta">
+                        <b>O. Ishaque</b>, K. Szalewicz. In preparation (almost complete).
+                    </span>
+                </li>
+                <li>
+                    <span class="pub-title">Effects of monomer flexibility and of nuclear quantum effects on properties of liquid water.</span><br>
+                    <span class="pub-meta">
+                        <b>O. Ishaque</b>, K. Szalewicz. In progress.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Software -->
+    <section id="software">
+        <h2 class="section-title">Software & Computational Tools</h2>
+
+        <div class="card">
+            <h3>CCpol23+ Rigid-Water MD (Quaternion-Based Rigid Body Dynamics)</h3>
+            <p>
+                I maintain an open-source Fortran molecular dynamics engine implementing the rigid CCpol23+ water
+                model with explicit 2-body, 3-body, and polarization terms. Key features include:
+            </p>
+            <ul class="item-list">
+                <li>Quaternion-based rigid-body integration for NVE, NVT, and NPT ensembles.</li>
+                <li>Ewald electrostatics, polarization/induction, and long-range-damped 3-body interactions.</li>
+                <li>HPC-oriented workflows with example systems spanning ambient to supercooled conditions.</li>
+            </ul>
+            <div class="btn-row">
+                <a class="btn" href="https://doi.org/10.5281/zenodo.14968189" target="_blank">Zenodo record</a>
+                <a class="btn" href="https://github.com/ommair/MD_code_water_model" target="_blank">GitHub repository</a>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="card">
+                <h3>Analysis & workflow automation</h3>
+                <ul class="item-list">
+                    <li>Python scripts for RDFs, diffusion coefficients, dielectric constants, and error metrics.</li>
+                    <li>Data-pipeline tools for parsing MD outputs and aggregating large simulation campaigns.</li>
+                    <li>Parameter-fitting utilities for many-body force fields using energies, forces, and trimer datasets.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Interfaces & ecosystem</h3>
+                <ul class="item-list">
+                    <li>Interfacing custom potentials with DL_POLY, LAMMPS, and i-Pi.</li>
+                    <li>Experience with GROMACS, VASP, Quantum ESPRESSO, ORCA, MERCURY, and UPACK.</li>
+                    <li>Use of machine-learning and data-science tools (scikit-learn, pandas, NumPy) for model analysis.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+        <h2 class="section-title">Teaching & Mentoring</h2>
+
+        <div class="card">
+            <h3>Teaching experience</h3>
+            <p>
+                I have over a decade of teaching experience spanning Pakistan and the United States.
+            </p>
+            <ul class="item-list">
+                <li>
+                    <b>Graduate Teaching Assistant, University of Delaware (2015–2025).</b><br>
+                    Led recitations and problem-solving sessions for Circuit Theory, Introductory Physics I/II,
+                    Fundamentals of Physics I/II, Physical Science, and Astronomy; coordinated TA teams and course logistics.
+                </li>
+                <li>
+                    <b>Lecturer, University of Karachi (2009–2015).</b><br>
+                    Taught Mechanics, Thermodynamics, Waves & Oscillations, Mathematical Physics I/II,
+                    Relativity & Cosmology, and Introductory Quantum Mechanics; contributed to lab design and
+                    conference organization.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Workshops & advanced training</h3>
+            <ul class="item-list">
+                <li>Quantum-Mechanical, Data-Driven and Multi-Scale Simulations of Complex Systems (QDMS), UC San Diego.</li>
+                <li>62nd Hands-On Workshop on Computational Biophysics (UIUC / NIH Center).</li>
+                <li>IBM Data Science Professional Certificate and DeepLearning.AI supervised ML courses.</li>
+                <li>Courses and trainings from Schrödinger and Udemy on molecular modeling and LAMMPS.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Profiles -->
+    <section id="profiles">
+        <h2 class="section-title">Research Profiles & Online Presence</h2>
+        <div class="card">
+            <h3>External profiles</h3>
+            <ul class="item-list">
+                <li>
+                    <b>Google Scholar:</b>
+                    <a href="https://scholar.google.com/citations?hl=en&user=y57f-t8AAAAJ" target="_blank">
+                        https://scholar.google.com/citations?hl=en&user=y57f-t8AAAAJ
+                    </a>
+                </li>
+                <li>
+                    <b>ResearchGate:</b>
+                    <a href="https://www.researchgate.net/profile/Ommair-Ishaque-2" target="_blank">
+                        https://www.researchgate.net/profile/Ommair-Ishaque-2
+                    </a>
+                </li>
+                <li>
+                    <b>ORCID:</b>
+                    <a href="https://orcid.org/0000-0002-6425-6107" target="_blank">
+                        https://orcid.org/0000-0002-6425-6107
+                    </a>
+                </li>
+                <li>
+                    <b>GitHub:</b>
+                    <a href="https://github.com/ommair" target="_blank">
+                        https://github.com/ommair
+                    </a>
+                </li>
+                <li>
+                    <b>LinkedIn:</b>
+                    <a href="https://www.linkedin.com/in/ommair-ishaque-4278a4126/" target="_blank">
+                        https://www.linkedin.com/in/ommair-ishaque-4278a4126/
+                    </a>
+                </li>
+                <li>
+                    <b>Zenodo (selected software/data):</b>
+                    <a href="https://doi.org/10.5281/zenodo.14968189" target="_blank">
+                        CCpol23+ MD code Zenodo record
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Contact & CV</h2>
+
+        <div class="two-col">
+            <div class="card">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:ommair@udel.edu">ommair@udel.edu</a></li>
+                    <li>Phone: +1 302 510 9222</li>
+                    <li>Address: Sharp Laboratory, Department of Physics & Astronomy,<br>
+                        University of Delaware, Newark, DE 19716, USA
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Curriculum Vitae</h3>
+                <p>
+                    A detailed CV including education, publications, software, teaching, and professional training is available here:
+                </p>
+                <!-- Update the href to the public CV location when uploaded -->
+                <a class="btn-primary btn" href="cv/Ommair_Ishaque_CV.pdf" target="_blank">Download CV (PDF)</a>
+                <p style="font-size:0.8rem; margin-top:0.75rem;">
+                    Please get in touch regarding research collaborations, postdoctoral opportunities,
+                    or projects involving many-body water modeling, molecular simulations, and advanced force-field development.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2025 Ommair Ishaque · Computational Physics & Water Modeling
+</footer>
+</body>
+</html>
