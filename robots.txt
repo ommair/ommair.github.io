@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ommair.github.io/sitemap.xml
